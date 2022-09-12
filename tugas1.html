@@ -1,0 +1,42 @@
+<script Language="javascript">
+//belajar variasi dan tipe data
+//data pegawai
+var nama_pegawai = "Ridwan";
+var jabatan = 'Manager';
+let status = 'Menikah';
+//gaji pegawai
+if(jabatan == 'Manager'){
+    gaji_pokok = 15000000;
+}
+else if(jabatan == 'Asisten Manager'){
+    gaji_pokok = 10000000;
+}
+else if(jabatan == 'Staff'){
+    gaji_pokok = 5000000;
+}
+else{
+    gaji_pokok = 0
+}
+let tunjangan_jabatan = 0.15 * gaji_pokok;
+let bpjs = 0.1 * gaji_pokok;
+let tunjangan_keluarga = 0.2 * gaji_pokok;
+let total_gaji = gaji_pokok + tunjangan_jabatan + bpjs + tunjangan_keluarga;
+//ternary 
+if(jabatan == 'Manager') tunjangan_keluarga = 0.2 * gaji_pokok;
+else status = 0;
+//cetak
+document.write("<h2 align='center'>DATA PEGAWAI</h2>");
+document.write("<hr/>");
+document.write("<br/>Nama Pegawai :" + nama_pegawai );
+document.write("<br/>Jabatan :" + jabatan );
+document.write("<br/>Status :" + status );
+document.write("<table border=2 align='justify' width='50%'><br/><thead><tr bgcolor='yellow'><th>Data Gaji</th><br/><th>Jumlah</th></tr></thead>" +
+"<br/><tbody><tr><td>Gaji Pokok" + "<td>" + gaji_pokok +  
+"<br/><tr><td>Tunjangan Jabatan" + "<td>"+ tunjangan_jabatan +
+"<br/><tr><td>BPJS" + "<td>"+ bpjs +
+"<br/><tr><td>Tunjangan Keluarga" + "<td>" + tunjangan_keluarga +
+"</tr></td></tbody>" +
+"<br/><tr bgcolor='green'><th>Total Gaji" + "<td>" + total_gaji  +
+"</th></tr></tfoot></table>" 
+);
+</script>
